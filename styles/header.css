@@ -1,0 +1,15 @@
+
+.title{
+    width: 75vw;
+    margin: auto;
+    font-size: 5vw;
+    opacity: 0.0001;
+  }
+  
+  .line{
+      overflow: hidden;
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+  }
+  
