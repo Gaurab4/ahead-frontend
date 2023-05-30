@@ -31,19 +31,20 @@ const Timeline = () => {
          p={3}
           >
           <Box flexDirection='column' display='flex' alignItems='center' >
-                <p >Let your friends , family, and co-worker(anonymously ) rate your social skills. </p>
-                <h1>Ever wonder what others think of you?</h1>
+                <span style={{fontSize:'20px', }}>Let your friends , family, and co-worker(anonymously ) rate your social skills. </span>
+                <span style={{fontWeight:'bold' , fontSize:'60px'}}>Ever wonder what others think of you?</span>
             </Box>
             <Box 
-            
-            m={3} 
+          
             flexDirection='row'
              display='flex' 
             
-
+        justifyContent='space-evenly'
+        justifyItems='center'
              >     
-                    <h3  >Built out of frustration</h3>
-                    <h1>Meet the ahead app</h1>
+                    <span style={{fontSize:'14px' ,margin: '20px',  padding: '5%'}}>Answer questions on your social skills</span>
+                    <span style={{fontSize:'14px' ,margin: '20px',  padding: '5%'}}>Let others anonymously answer the same questions about you</span>
+                    <span style={{fontSize:'14px' ,margin: '20px',  padding: '5%'}}>Find out where you and others see things the same way - and where not!</span>
 
     
                     

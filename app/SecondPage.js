@@ -2,7 +2,7 @@
 
 import { Paper, Stack, Card } from '@mui/material';
 import { gsap } from 'gsap';
-// import Card from '';
+
 import React, { useEffect, useRef } from 'react';
 
 const SecondPage = () => {

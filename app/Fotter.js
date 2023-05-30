@@ -2,7 +2,7 @@
 
 import { Divider, Paper, Stack } from '@mui/material';
 import React from 'react'
-import Card from './Card';
+
 
 
 const Fotter = () => {

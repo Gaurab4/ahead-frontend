@@ -12,11 +12,11 @@ const Test = () => {
     sx={{height:'100vh'}}
     // alignContent='center'
      >
-        <p>We take privacy seriously</p>
-        <p sx={{ }}>Before you get started</p>
-        <p>"We won't share your answers anyone(and won't even tell</p>
-        <p>you which friends said what about you )"</p>
-        <p> with love,</p>  
+        <span style={{fontSize:'18px'}}>We take privacy seriously</span>
+        <span style={{fontWeight:'bold' , fontSize:'30px'}}>Before you get started</span>
+      <br></br>  <span style={{fontWeight:'bold' , fontSize:'20px'}}>"We won't share your answers anyone(and won't even tell</span>
+        <span style={{fontWeight:'bold' , fontSize:'20px'}}>you which friends said what about you )"</span>
+        <span style={{fontSize:'15px'}}> with love,Team ahead</span><br></br>  
         {/* <img src='/logo.ico'></img> */}
         <Paper 
                     component='button'
@@ -37,9 +37,9 @@ const Test = () => {
 
                     >
                         Start a test
-                    </Paper>
+                    </Paper><br></br>
 
-                    <p> Take only 5 minutes</p>
+                    <span style={{fontSize:'15px'}}> Take only 5 minutes</span>
     </Stack>
   )
 }
