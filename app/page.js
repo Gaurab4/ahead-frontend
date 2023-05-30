@@ -6,15 +6,19 @@ import SecondPage from "./SecondPage";
 import About from "./About";
 import Test from "./Test";
 import Timeline from "./Timeline";
+import Workwithus from "./Workwithus";
+import SelfImpr from "./SelfImpr";
 
 const HomePage = () => {
   return <div>
 <MainPage/>
 <SecondPage/>
 <About/>
+<SelfImpr/>
 <Timeline/>
 <Test/>
-  <Fotter/>
+<Workwithus/>
+  {/* <Fotter/> */}
   </div>;
 };
 

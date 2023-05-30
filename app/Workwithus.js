@@ -1,28 +1,11 @@
 'use client'
 
 import { Box, Paper } from '@mui/material';
-import React, { useEffect, useRef, useState } from 'react';
+import React, {useEffect, useRef } from 'react'
 
 
-const MainPage = () => {
+const Workwithus = () => {
 
-    const paperRef = useRef(null);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      const scrollThreshold = 200; // Adjust this value as per your requirement
-
-      setIsScrolled(scrollTop > scrollThreshold);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
 
 
@@ -31,17 +14,14 @@ const MainPage = () => {
 
     <div>
     <Paper
-    ref={paperRef}
-        sx={{
-          margin: '45px',
-          marginTop: '0px',
-          height: '85vh',
-          width: '95%',
-          borderRadius: '4vh',
-          background: '#c6abd6',
-          transition: 'background-color 0.3s', // Add transition to background-color
-          backgroundColor: isScrolled ? '#f2e4f5' : '#c6abd6', // Change background color based on scroll
-        }}
+    sx={{
+        margin:'45px',
+        marginTop:'0px',
+        height:'85vh',
+        width:'95%',
+        borderRadius:'4vh',
+        background:'#c6abd6'
+    }}
     >
         <Box flexDirection='row' display='flex'>
             <Box>    
@@ -79,9 +59,9 @@ const MainPage = () => {
                     </Box>
                 </Box>
             </Box>
-            <Box flexDirection='row' display='flex' >
-                {/* <img src='/leaf.png' ></img> */}
-                <img src='/mainPage/Phone.png' height={'100%'} width={'65%'}></img>
+            <Box flexDirection='row' display='flex'>
+                <img src='/leaf.png' ></img>
+                <img src='/circle.png'></img>
             </Box>
         </Box>
     </Paper>
@@ -90,5 +70,5 @@ const MainPage = () => {
   )
 }
 
-export default MainPage;
+export default Workwithus;
 

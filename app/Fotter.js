@@ -20,6 +20,7 @@ const Fotter = () => {
       height='50vh'
       >
         <Card>
+        <img src='/logo.ico'></img>
         <h3>My first </h3>
         <ul>
         <li> Full-time position</li>
@@ -29,10 +30,12 @@ const Fotter = () => {
       
         </Card>
         <Card>
+        <img src='/logo.ico'></img>
         <h3>My first </h3>
         <p>This is the content of my card.</p>
         </Card>
         <Card>
+        <img src='/logo.ico'></img>
         <h3>My first </h3>
         <p>This is the content of my card.</p>
         </Card>

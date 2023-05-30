@@ -9,6 +9,7 @@ const Header = () => {
     direction= 'row'
     alignItems='center'
     p={2}
+    css={{zIndex: 1}}
     sx={{position:'sticky' ,background:'white' , top:0 , justifyContent:'space-between'}}
     >
     <Link href="/" style={{display:'flex' , alignItems:'center' }}>

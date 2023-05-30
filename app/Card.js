@@ -5,7 +5,7 @@ import { Paper } from '@mui/material';
 const Card = ({title, children }) => {
   return (
     <Paper
-        sx={{height:'230px' , width:'350px' ,borderRadius:'2vh' ,p:'2%' ,m:'10px' }}
+        sx={{height:'230px' , width:'550px' ,borderRadius:'2vh' ,p:'2%' ,m:'10px'  }}
 
         
     >
