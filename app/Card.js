@@ -6,8 +6,7 @@ const Card = ({title, children }) => {
   return (
     <Paper
         sx={{height:'230px' , width:'350px' ,borderRadius:'2vh' ,p:'2%' ,m:'10px' }}
-        
-        
+
         
     >
     
