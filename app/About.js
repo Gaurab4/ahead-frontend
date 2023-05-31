@@ -2,7 +2,9 @@
 import { Box, Paper } from '@mui/material';
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-
+import Lottie from 'lottie-react';
+import animationData from './../public/lottiefiles/flower.json';
+import DoganimationData from './../public/lottiefiles/dog.json';
 const About = () => {
   const text1Ref = useRef();
   const text2Ref = useRef();
@@ -66,7 +68,7 @@ const About = () => {
     observer.observe(text2);
     observer.observe(text3);
     observer.observe(text4);
-    observer.observe(image);
+    // observer.observe(image);
 
 
     return () => {
@@ -83,7 +85,7 @@ const About = () => {
           height: '85vh',
           width: '95%',
           borderRadius: '4vh',
-          background: '#f0e4bb',
+          background: '#FEF7F0',
         }}
       >
         <Box flexDirection='row' display='flex' alignItems='center' justifyContent='center'>
@@ -97,17 +99,12 @@ const About = () => {
             </span>
 
             <Box flexDirection='column' marginLeft={4}>
-              <img
-                ref={imageRef}
-                src='/logo.ico'
-                height={330}
-                width={330}
-                alt="Logo"
-                style={{ transform: 'scale(0)', opacity: 0 }}
-              ></img>
+            
+              <Lottie animationData={DoganimationData}/>
             </Box>
           </Box>
-          <Box flexDirection='column' display='flex' flex={5} p={18} marginTop={20} marginRight={10}>
+          <Box flexDirection='column' display='flex' flex={5} p={18} marginTop={10} marginRight={10}>
+          <Lottie animationData={animationData} style={{height:'200px' , width:'200px' , paddingBottom:'20%'}} />
             <span ref={text3Ref}style={{ fontSize: '22px', color: 'grey' }}>
               A personalized pocket coach that provides bite-sized, science-driven tools to boost emotional intelligence.
             </span>
