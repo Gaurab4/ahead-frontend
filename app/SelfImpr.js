@@ -120,9 +120,9 @@ const SelfImpr = () => {
         justifyContent='space-evenly'
         marginBottom={0}
         >
-        <span style={{fontWeight:'bold' , fontSize:'40px'}} >EQ Beats IQ </span>
-        <span  style={{color:'grey', fontSize:'20px' }}>People with high emotional <br></br>intelligence(EQ) live more fulfilled <br></br>lives .they tend to be happier<br></br> have lealthier relationships </span>
-        <span style={{color:'grey', fontSize:'20px' }}>People with high emotional<br></br> intelligence(EQ) live more<br></br> fulfilled lives .they tend to be happier<br></br> have lealthier relationships </span>
+        <span style={{fontWeight:'bold' , fontSize:'40px'}} >Be the best you<br></br> with EQ </span>
+        <span  style={{color:'grey', fontSize:'20px' }}>Not having your own emotions <br></br>under control might be holding<br></br> you back. </span>
+        <span style={{color:'grey', fontSize:'20px' }}>Additionally, not understanding<br></br> those of others stops you from <br></br>being parent, friend you can be. </span>
 
         </Stack>
     </Stack>

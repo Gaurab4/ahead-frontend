@@ -18,7 +18,7 @@ const HomePage = () => {
 <Timeline/>
 <Test/>
 <Workwithus/>
-  {/* <Fotter/> */}
+<Fotter/>
   </div>;
 };
 

@@ -1,9 +1,54 @@
 'use client'
 
 import { Stack, Paper } from '@mui/material';
-import React from 'react'
+
+import React, {useEffect, useRef } from 'react';
+
+import { gsap } from 'gsap';
 
 const Test = () => {
+    const text2Ref = useRef();
+    
+    useEffect(() => {
+    const text2 = text2Ref.current;
+    
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          gsap.fromTo(
+            text2,
+            { scale: 0, opacity: 0 },
+            { scale: 1, opacity: 1, duration: 1.9, ease: 'bounce' }
+          );
+          
+        
+          
+        }
+      });
+    }, observerOptions);
+
+
+    observer.observe(text2);
+  
+
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+
+
+
+
+
   return (
     <Stack 
     flexDirection='column'
@@ -19,6 +64,7 @@ const Test = () => {
         <span style={{fontSize:'15px'}}> with love,Team ahead</span><br></br>  
         {/* <img src='/logo.ico'></img> */}
         <Paper 
+        ref={text2Ref}
                     component='button'
                     sx={{
                         p:'2px',
@@ -35,7 +81,7 @@ const Test = () => {
                     //   marginRight:'7%'
                     }}
 
-                    >
+                    > 
                         Start a test
                     </Paper><br></br>
 
