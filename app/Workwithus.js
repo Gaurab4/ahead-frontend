@@ -2,8 +2,8 @@
 
 import { Box, Paper , Stack , Card} from '@mui/material';
 import React, {useEffect, useRef } from 'react'
-
-
+import { gsap } from 'gsap';
+// Data for the Cards
 const categories = [
     {title:'Power through, even when the going gets tough' , subtitle: 'We help you spot and work around whatever stands in the way, be it bad habits, fears, etc.'},
     {title:'Learn more about who you are and where you want to go' ,subtitle:'We ask the right questions to help you better understand why you do things the way you do.'},
@@ -15,9 +15,55 @@ const categories = [
 ];
 
 
+
+
 const Workwithus = () => {
 
-
+    const headingRef = useRef();
+    const contentRef = useRef();
+  
+  
+    useEffect(() => {
+      const heading = headingRef.current;
+      const content = contentRef.current;
+    
+  
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.6,
+      };
+  
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            gsap.set(content, { opacity: 0, x: -50 });
+            gsap.set(heading, { opacity: 0, x: -50 });
+  
+            gsap.fromTo(
+              heading,
+              { x: '-50%', opacity: 0 },
+              { x: '0%', opacity: 1, duration: 1, ease: 'power3.out' }
+            );
+  
+            gsap.fromTo(
+              content,
+              { x: '150%', opacity: 0 },
+              { x: '0%', opacity: 1, duration: 1, ease: 'power3.out', delay: 0.5 }
+            );
+          
+            observer.unobserve(entry.target);
+            
+          }
+        });
+      }, observerOptions);
+  
+    
+        observer.observe(heading);
+        observer.observe(content);
+  
+  
+    },[]);
 
 
 
@@ -36,7 +82,7 @@ const Workwithus = () => {
     >
         <Box flexDirection='row' display='flex' >
             <Box flexDirection='column' display='flex' flex={6}>    
-            <span style={{fontSize:'3em' , fontWeight:'bold' , margin:'10%' , marginTop:'15%'}}>Work with us </span>
+            <span ref={headingRef} style={{fontSize:'3em' , fontWeight:'bold' , margin:'10%' , marginTop:'15%'}}>Work with us </span>
                 <Box flexDirection='column' display='flex' p={2}  sx={{marginLeft:'10%'}}>
                 
                     <Paper 
@@ -95,7 +141,7 @@ improvement fun and lasting. We know there's  <br></br>a way how to make it work
                 </Box>
             </Box>
             <Box flexDirection='column' display='flex' flex={6}>
-  <span style={{ fontSize: '4em', fontWeight: 'bold', margin: '10%', marginTop: '5%', marginRight: '0%', marginLeft: '70%' }}>ahead </span>
+  <span ref={contentRef} style={{ fontSize: '4em', fontWeight: 'bold', margin: '10%', marginTop: '12%',color:'#6441EF', marginRight: '0%', marginLeft: '70%' }}>ahead </span>
   <Box flexDirection='column' display='flex' p={2} sx={{ overflow: 'auto', maxHeight: '40em' }}>
   <Stack
     direction={"row"}
