@@ -20,18 +20,16 @@ const Workwithus = () => {
         height:'85vh',
         width:'95%',
         borderRadius:'4vh',
-        background:'#c6abd6'
+        background:'#F3F1FF'
     }}
     >
-        <Box flexDirection='row' display='flex'>
-            <Box>    
-                    <h3 >Ahead App</h3>
-                    <h1>Master your life<br></br> by mastering <br></br> emotions</h1>
-
-                <Box flexDirection='row' display='flex' p={2}  sx={{}}>
+        <Box flexDirection='row' display='flex' >
+            <Box flexDirection='column' display='flex' flex={6}>    
+            <span style={{fontSize:'3em' , fontWeight:'bold' , margin:'10%' , marginTop:'15%'}}>Work with us </span>
+                <Box flexDirection='column' display='flex' p={2}  sx={{}}>
                 
                     <Paper 
-                    component='button'
+                    component='card'
                     sx={{
                         p:'2px',
                         // m:'4px',
@@ -39,8 +37,31 @@ const Workwithus = () => {
                         justifyContent:'center',
                         alignContent:'center',
                     borderRadius:'2vh',
-                    width:'180px',
-                    height:'55px',
+                    width:'30em',
+                    height:'20em',
+                    background:'black',
+                    color:'white',
+                    boxShadow:'none',
+                    //   marginRight:'7%'
+                    }}
+
+                    >
+                        Download on the <br></br>
+                        <h5>App Store</h5>
+                    </Paper>
+                    <Paper 
+                    component='card'
+                    sx={{
+                        p:'2px',
+                        // m:'4px',
+                        alignItems:'center',
+                        justifyContent:'center',
+                        alignContent:'center',
+                        borderTopLeftRadius:'0px',
+                        overflowY:'-10px',
+                    borderRadius:'2vh',
+                    width:'30em',
+                    height:'10em',
                     background:'black',
                     color:'white',
                     boxShadow:'none',
@@ -52,16 +73,60 @@ const Workwithus = () => {
                         <h5>App Store</h5>
                     </Paper>
                 
-                
-                    <Box flexDirection='column' marginLeft={4} >
-                        <p>⭐️⭐️⭐️⭐️⭐️</p>
-                        <p>100+ AppStore reviews</p>
-                    </Box>
+
                 </Box>
             </Box>
-            <Box flexDirection='row' display='flex'>
-                <img src='/leaf.png' ></img>
-                <img src='/circle.png'></img>
+            <Box flexDirection='column' display='flex' flex={6}>
+            <span style={{fontSize:'5em' , fontWeight:'bold' , margin:'10%' , marginTop:'15%'}}>ahead </span>
+                <Box flexDirection='column' display='flex' p={2}  sx={{}}>
+                
+                    <Paper 
+                    component='card'
+                    sx={{
+                        p:'2px',
+                        // m:'4px',
+                        alignItems:'center',
+                        justifyContent:'center',
+                        alignContent:'center',
+                    borderRadius:'2vh',
+                    width:'30em',
+                    height:'20em',
+                    background:'black',
+                    color:'white',
+                    boxShadow:'none',
+                    //   marginRight:'7%'
+                    }}
+
+                    >
+                        Download on the <br></br>
+                        <h5>App Store</h5>
+                    </Paper>
+                    <Paper 
+                    component='card'
+                    sx={{
+                        p:'2px',
+                        // m:'4px',
+                        alignItems:'center',
+                        justifyContent:'center',
+                        alignContent:'center',
+                        borderTopLeftRadius:'0px',
+                        overflowY:'-10px',
+                    borderRadius:'2vh',
+                    width:'30em',
+                    height:'10em',
+                    background:'black',
+                    color:'white',
+                    boxShadow:'none',
+                    //   marginRight:'7%'
+                    }}
+
+                    >
+                        Download on the <br></br>
+                        <h5>App Store</h5>
+                    </Paper>
+                
+
+                </Box>
             </Box>
         </Box>
     </Paper>
