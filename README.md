@@ -19,6 +19,5 @@ https://dribbble.com/shots/19807069-Ahead-app-redesign-concept
 
 
 ## Link of the Live Website : 
-
-https://aheadui.netlify.app/
+https://ahead-frontend.vercel.app/
 
